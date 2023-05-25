@@ -1,0 +1,354 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+body{
+  background-color: rgb(250,250,250);
+  font-family: 'Roboto', sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+.navbar-container{
+  width: 100px;
+  margin: 0;
+  left: 0;
+  top: 0;
+  background-color: blueviolet;
+  height: 100vh;
+  position:fixed;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  transition: all 0.3s ease;
+}
+
+.navbar-container:hover{
+  width: 200px;
+}
+.navbar-list{
+  display:flex;
+  flex-direction: column;
+}
+
+.navbar-list a{
+  display:flex;
+  gap:15px;
+  align-items: center;
+  font-size: 35px;
+  margin-bottom: 20px;
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.hide{
+  display:none;
+  text-decoration: none;
+  font-size:15px;
+  transition: all 0.3s ease;
+}
+
+.navbar-container:hover .hide{
+  display:block;
+}
+
+
+.navbar-list a:hover{
+  text-shadow: 2px 2px 2px black;
+}
+
+.aboutme-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width:55%;
+  margin: 0 auto;
+  gap: 70px;
+}
+
+.aboutme-information{
+  display: flex;
+  flex-direction: column;
+  width:40%;
+}
+
+.aboutme-information h3{
+  font-size: 30px;
+  margin:0;
+}
+
+.aboutme-information h3 span{
+  color: blueviolet;
+}
+
+.aboutme-button{
+  border-radius: 30px;
+  background-color: blueviolet;
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  font-size: 20px;
+}
+
+.aboutme-container2{
+  height: 600px;
+  width:55%;
+  margin: 0 auto;
+  gap: 120px;
+}
+
+.aboutme-description{
+  background-color: white;
+  padding: 20px;
+  font-size: 25px;
+  margin-top: 50px;
+  width:900px;
+  border-radius: 50px;
+  box-shadow: 1px 1px 6px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.aboutme-description p span{
+  color:blueviolet;
+}
+.skills-container{
+  width: 55%;
+  border-radius: 30px;
+  background-color: white;
+  margin: 0 auto;
+}
+
+.projects-container{
+  width: 55%;
+  margin: 0 auto;
+}
+
+.skills-container1{
+  width: 55%;
+  margin: 0 auto;
+}
+
+.skills-grid{
+  display: grid;
+  padding: 20px;
+  gap:50px;
+  padding-left:50px;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+
+.skills-grid li{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  box-shadow: 1px 1px 10px rgba(0,0,0,0.1);
+  padding: 10px 10px;
+  border-radius:15px;
+  transition: all 0.7s ease;
+}
+
+.skills-grid li:hover{
+  box-shadow: 1px 1px 40px rgba(0,0,0,0.4);
+}
+
+.skills-grid li p{
+  font-size:10px;
+  text-align: center;
+}
+
+.projectcard-container{
+  background-color: white;
+  padding: 40px;
+  border-radius: 30px;
+}
+
+.card{
+  background-color: white;
+  display:flex;
+  gap: 15px;
+  margin-bottom: 35px;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 1px 1px 30px rgba(0,0,0,0.1);
+}
+
+.card img{
+  background-color: gray;
+  border-radius: 15px;
+  width:40%;
+  height: 40%;
+}
+
+.card-information{
+  width: 70%;
+}
+
+.contact-container{
+  width: 55%;
+  margin: 0 auto;
+  margin-bottom: 70px;
+}
+
+.contact-inner{
+  background-color: white;
+  margin: 0 auto;
+  padding:35px;
+  border-radius:30px;
+}
+
+.mail-card a{
+  text-decoration: none;
+  color: blueviolet;
+}
+
+.mail-card a:hover{
+  text-decoration: underline;
+}
+
+form{
+  display:flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap:15px;
+}
+
+form input:focus{
+  border: 5px solid lightblue;
+}
+
+form input{
+  height:30px;
+  width:100%;
+  border: 1px solid lightgray;
+  padding-left:10px;
+  font-size:15px;
+}
+
+.mail-card{
+  width:60%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius:20px;
+  box-shadow: 1px 1px 10px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 1233px){
+  .aboutme-description{
+    width:630px;
+    margin-bottom:20px;
+  }
+
+  .skills-container1{
+    margin-top: 70px
+  }
+}
+
+@media (max-width: 1000px){
+  .card{
+    flex-direction: column;
+  }
+
+  .card img{
+    width: 100%;
+  }
+
+  .card-information{
+    width: 100%;
+  }
+
+}
+
+@media (max-width:886px){
+  .aboutme-description{
+    width:100%;
+    font-size: 20px;
+  }
+
+  .aboutme-container{
+    flex-direction: column;
+    width:60%;
+  }
+  .aboutme-information{
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 800px){
+  .navbar-container{
+    width: 100%;
+    margin: 0;
+    left: 0;
+    top: 0;
+    background-color: blueviolet;
+    height: 100px;
+    position:fixed;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    transition: none;
+  }
+
+  .navbar-list{
+    flex-direction: row;
+    gap: 30px;
+  }
+
+  .navbar-list a{
+    flex-direction: column;
+  }
+
+  .navbar-container:hover{
+    width: 100%;
+  }
+
+  .aboutme-container{
+    margin-top: 100px;
+  }
+
+
+  .skills-container{
+    width: 85%;
+  }
+
+  .projects-container{
+    width: 85%;
+  }
+
+  .contact-container{
+    width: 85%;
+  }
+  .mail-card{
+    width: 85%;
+  }
+}
+
+@media (max-width: 700px){
+  .skills-container1{
+    margin-top: 200px;
+  }
+
+  .aboutme-container2{
+    width: 85%;
+  }
+
+  .projectcard-container{
+    padding: 0
+  }
+
+  .contact-inner{
+    padding: 10px;
+  }
+
+  .aboutme-button{
+    width: 70%;
+    margin: 0 auto;
+  }
+
+}
