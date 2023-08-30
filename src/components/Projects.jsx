@@ -1,4 +1,4 @@
-import React from 'react'
+
 import ProjectCard from './ProjectCard'
 import rentalCar from "../assets/rentalcar.png"
 import blog from "../assets/blog.png"
@@ -6,6 +6,7 @@ import movies from "../assets/movies.png"
 import weekend from "../assets/weekend.png"
 import {AiOutlineLine} from "react-icons/ai"
 import noimage from "../assets/noimage.png"
+import ecommerce from "../assets/ecommerce.png"
 function Projects() {
   const projects = [
     {
@@ -19,12 +20,25 @@ function Projects() {
       repo: "https://github.com/rmPablo1/rental"
     },
     {
+      image: ecommerce,
+      title: "Shopmefy",
+      stack: "HTML, CSS, JavaScript, React, NodeJS, Express, Stripe, MongoDB, Mongoose, Cloudinary",
+      description: <>
+        <li>The users are able to post products on the website and sell them via Stripe</li>
+        <li>Other users can look for your products and buy them using Stripe</li>
+        <li>There is Pagination to not overload the server and also filter search to make easy looking for a specific product</li>
+        <li>On first load takes a little bit because of the restriction of the hosting page for free tiers.</li>
+      </>,
+      live: "https://shopmefy.onrender.com/"
+    },
+    {
       image: blog,
       title: "Blog website project",
       stack: "HTML, CSS, JavaScript, React, NodeJS, ExpressJS, JWT, SendGrid, MongoDB, Mongoose",
       description: <><li>Built using the MERN stack</li>
       <li>Minimalist website done to showcase my skills with backend development</li>
       <li>Implemented authentication and authorization system using JWTs with MongoDB backend using Mongoose as an ODM and React as a frontend library</li>
+      <li>On first load takes a little bit because of the limitation on the hosting service of the free tier</li>
       </>,
       live: "https://frontendblogapps.onrender.com/",
       repo: "https://github.com/rmPablo1/fullstack-projects"
@@ -63,10 +77,11 @@ function Projects() {
       </>,
       repo: "https://github.com/rmPablo1/rails-watch-list"
     }
+
   ]
 
   const renderedProjects = projects.map((project) => {
-    return <ProjectCard image={project.image} title={project.title} stack={project.stack} description={project.description} live={project.live} repo={project.repo} />
+    return <ProjectCard key={project.title} image={project.image} title={project.title} stack={project.stack} description={project.description} live={project.live} repo={project.repo} />
   })
   return (
     <div className="projects-container" id="projectsLine">
